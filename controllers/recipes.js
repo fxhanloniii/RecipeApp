@@ -1,6 +1,10 @@
-const express = require('express');
-const router = express.Router();
-const { Recipe } = require('../models');
+const express = require('express')
+const router = express.Router()
+const { Recipe } = require('../models')
+
+router.get('/recipe', (req, res) => {
+  res.render('/index.ejs', { Recipe })
+})
 
 
 router.get('/:cuisine', async (req, res, next) => {
@@ -20,16 +24,14 @@ router.get('/:cuisine', async (req, res, next) => {
     }
 });
 
-
-
-
-
-
-
-
-
-
-
-
-
 module.exports = router;
+
+
+
+
+
+
+
+
+
+
