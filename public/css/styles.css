@@ -180,3 +180,28 @@ main {
     font-size: 16px;
 }
 
+/* Recipes */
+
+.recipes {
+    width: 100%;
+    height: auto;
+    padding-top: 214px;  
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.recipeDiv {
+    width: 300px;
+    height: 400px;
+    margin: 10px;
+    border: 1px black solid;
+    overflow: hidden;
+}
+
+.recipeDiv img {
+    width: 300px;
+    height: 400px;
+}
