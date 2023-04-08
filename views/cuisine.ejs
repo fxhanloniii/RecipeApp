@@ -1,10 +1,10 @@
 <%- include('./partials/header.ejs', {pageTitle: "Recipe.cuisine"}) %>
 
 <div class="recipes">
-    <% for(let i=0; i < 20; i++) { %>
+    <% for(let i=0; i < 100 ? i < recipes.length : i < 20; i++) { %>
     <div class="recipeDiv">
-        <a href='/<%= recipes[i]._id %>'><h3><%= recipes[i].recipe_name %></h3></a>
-        <a href='/<%= recipes[i]._id %>'><img src="<%= recipes[i].image %>"></a>
+        <a href='/recipes/<%= recipes[i]._id %>'><h3><%= recipes[i].recipe_name %></h3></a>
+        <a href='/recipes/<%= recipes[i]._id %>'><img src="<%= recipes[i].image %>"></a>
     </div>
     <% } %>
 </div>
