@@ -2,12 +2,23 @@ const express = require('express')
 const router = express.Router()
 const { Recipe } = require('../models')
 
-router.get('/recipe', (req, res) => {
-    res.render('/index.ejs', { Recipe })
-  })
+// router.get('/recipe', (req, res) => {
+//     res.render('/index.ejs', { Recipe })
+//   })
   
-router.get('/recipe/new', (req, res) => {
-    res.render('/new.ejs')
+// router.get('/recipe/new', (req, res) => {
+//     res.render('/new.ejs')
+// })
+
+//show route
+router.get('/:id', async (req, res, next) => {
+    try {
+        const recipeSelected = await Recipe.findById(req.params.id);
+        console.log(recipeSelected)
+        res.render('show.ejs', {recipe: recipeSelected})
+    } catch(err) {
+        next()
+    }
 })
 
 
@@ -27,6 +38,7 @@ router.get('/:cuisine', async (req, res, next) => {
         next();
     }
 });
+
 
 module.exports = router;
 
