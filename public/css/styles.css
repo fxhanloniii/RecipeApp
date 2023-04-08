@@ -1,0 +1,182 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
+
+html, body {
+    font-family: 'Roboto Mono', monospace;
+    margin: 0;
+    
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    position: fixed;
+    z-index: 1;
+    margin: 0;
+}
+
+.topHeader {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    justify-content: center;
+    background-color: #EF6351;
+}
+
+.login {
+    display: flex;
+    justify-content: flex-end;
+    position: absolute;
+    right: 20px;
+}
+
+.login a {
+    color: white;
+}
+
+.topHeader img {
+    width: 400px;
+    height: 150px;
+    object-fit: contain;
+}
+
+.navbar {
+    background-color: #F38375;
+    width: 100%;
+    height: 40px;
+    display: flex;
+    align-items: center;
+
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    flex-direction: row;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav li {
+    margin: 0 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+main {
+    padding-top: 214px;
+    margin: 0 20px;
+}
+
+.div1 {
+    height: 400px;
+    width: 100%;
+    background-color: #f7a399;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    overflow-x: scroll;
+    border-radius: 20px;
+    /* Need to fix Div Scroll FXH */
+}
+
+.div1a, .div1b, .div1c, .div1d, .div1e, .div1f {
+    border: 2px solid black;
+    height: 300px;
+    width: 250px;
+    flex-shrink: 0;
+    margin: 20px;
+    border-radius: 20px;
+    overflow: hidden;
+    
+}
+
+.div1a img, .div1b img, .div1c img, .div1d img, .div1e img, .div1f img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: bottom;
+}
+
+.div2 {
+    height: 600px;
+    width: 100%;
+    border: 1px solid black;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.div2a, .div2b, .div2c {
+    width: 450px;
+    height: 550px;
+    border: 1px solid black;
+    margin: 20px;
+}
+
+.div3 {
+    width: 100%;
+    height: 400px;  
+}
+
+.div3 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+
+/* Newsletter */
+
+.newsletter {
+    height: 200px;
+    width: 100%;
+    background-color: #fdcc43;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+.newsletter h4 {
+    font-size: 40px;
+    margin: 0;
+    color: white;
+}
+
+
+.newsletter input[type="email"] {
+    width: 200px;
+    text-align: center;
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    margin-right: 10px;
+}
+
+.newsletter button[type="submit"] {
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+}
+
