@@ -3,8 +3,8 @@
 <div class="recipes">
     <% for(let i=0; i < 20; i++) { %>
     <div class="recipeDiv">
-        <h3><%= recipes[i].recipe_name %></h3>
-        <img src="<%= recipes[i].image %>">
+        <a href='/<%= recipes[i]._id %>'><h3><%= recipes[i].recipe_name %></h3></a>
+        <a href='/<%= recipes[i]._id %>'><img src="<%= recipes[i].image %>"></a>
     </div>
     <% } %>
 </div>
