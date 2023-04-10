@@ -78,7 +78,7 @@ nav a {
 
 main {
     padding-top: 214px;
-    margin: 0 20px;
+    margin: 0px;
 }
 
 .div1 {
@@ -90,7 +90,6 @@ main {
     justify-content: space-around;
     align-items: center;
     overflow-x: scroll;
-    border-radius: 20px;
     /* Need to fix Div Scroll FXH */
 }
 
