@@ -115,7 +115,7 @@ nav a {
 }
 
 main {
-    padding-top: 214px;
+    padding-top: 250px;
     margin: 0px;
 }
 
@@ -129,8 +129,6 @@ main {
     justify-content: space-around;
     align-items: center;
     overflow-x: scroll;
-    padding-top: 30px;
-    /* Need to fix Div Scroll FXH */
 }
 
 .div1a, .div1b, .div1c, .div1d, .div1e {
@@ -268,8 +266,7 @@ main {
 
 .recipes {
     width: 100%;
-    height: auto;
-    padding-top: 214px;  
+    height: auto; 
     margin: 0 auto;
     display: flex;
     flex-wrap: wrap;
@@ -279,13 +276,42 @@ main {
 
 .recipeDiv {
     width: 300px;
-    height: 400px;
+    height: 300px;
     margin: 10px;
-    border: 1px black solid;
     overflow: hidden;
+    position: relative;
+    box-shadow: 0px 5px 10px rgba(0,0,0,0.3);
+    border-radius: 5px;
 }
 
 .recipeDiv img {
-    width: 300px;
-    height: 400px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.recipeDiv a {
+    text-decoration: none;
+    color: black;
+}
+
+.recipeDiv h3 {
+    margin: 5px;
+    font-size: 18px;
+}
+
+.recipeDiv:hover {
+    filter: brightness(70%);
+}
+
+.recipeDiv h3 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0,0,0,0.6);
+    color: white;
+    text-align: center;
+    padding: 5px;
+    border-radius: 5px;
 }
