@@ -315,3 +315,19 @@ main {
     padding: 5px;
     border-radius: 5px;
 }
+
+/* Show Page */
+
+.recipeShow {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 40px;
+}
+
+.showInfo {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin-left: 40px;
+}
