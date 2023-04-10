@@ -5,10 +5,15 @@ const { Recipe } = require('../models')
 // router.get('/recipe', (req, res) => {
 //     res.render('/index.ejs', { Recipe })
 //   })
-  
+
+
+// Index Search Route 
+
+
 // router.get('/recipe/new', (req, res) => {
 //     res.render('/new.ejs')
 // })
+
 
 
 
