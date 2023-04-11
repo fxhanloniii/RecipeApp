@@ -4,7 +4,7 @@ const { Recipe } = require('../models')
 
 //new route (added by SA)
 router.get('/new', (req, res) => {
-  res.render('recipe/new.ejs')
+  res.render('myRecipe/new.ejs')
 })
 
 //post route to post through mongo (added by SA)
@@ -69,3 +69,5 @@ router.delete('/:id', async (req, res) => {
     next()
   }
 })
+
+module.exports = router
