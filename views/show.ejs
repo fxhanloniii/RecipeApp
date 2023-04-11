@@ -1,8 +1,16 @@
 <%- include('./partials/header.ejs', {pageTitle: "Recipe"}) %>
-    <h2>Cuisine: <%= recipe.cuisine %></h2>
-    <h2> <%= recipe.image %></h2>
-    <h1>Name: <%= recipe.recipe_name %></h1>
-    <h2>Ingredients: <%= recipe.ingredients %></h2>
-    <h2>Prep-time: <%= recipe.prep_time %></h2>
-    <h2>Serves: <%= recipe.serves %></h2>
+<main>
+    <div class="recipeShow">
+        <!-- <h2>Cuisine: <%= recipe.cuisine %></h2> -->
+        <div class="showImg">
+            <img src="<%= recipe.image %>">
+        </div>
+        <div class="showInfo">
+            <h1><%= recipe.recipe_name %></h1>
+            <h2>Ingredients: <%= recipe.ingredients %></h2>
+            <h2>Prep-time: <%= recipe.prep_time %></h2>
+            <h2>Serves: <%= recipe.serves %></h2>
+        </div>
+    </div>
+</main>
 <%- include('./partials/footer.ejs') %>

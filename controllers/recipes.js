@@ -6,9 +6,11 @@ const { Recipe } = require('../models')
 //     res.render('/index.ejs', { Recipe })
 //   })
 
+
 // router.get('/recipe/new', (req, res) => {
 //     res.render('/new.ejs')
 // })
+
 
 router.get('/cuisine/:cuisine', async (req, res, next) => {
   try {
