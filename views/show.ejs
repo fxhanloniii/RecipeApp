@@ -7,9 +7,25 @@
         </div>
         <div class="showInfo">
             <h1><%= recipe.recipe_name %></h1>
-            <h2>Ingredients: <%= recipe.ingredients %></h2>
+            <div class="ingredientList">
+            <h2>Ingredients:</h2>
+            <% let ingredientsArray = recipe.ingredients[0].replace(/[\[\]']+/g, '').split(','); %>
+            <% for (let i = 0; i < ingredientsArray.length; i++) { %>
+                <div class="ingredient">
+                    <%= ingredientsArray[i] %>
+                </div>
+            <% } %>
+            </div>
             <h2>Prep-time: <%= recipe.prep_time %></h2>
-            <h2>Cooking-method: <%= recipe.cooking_method %></h2>
+            <div class="cookingMethod">
+            <h2>Cooking Method:</h2>
+            <% let cookingMethodArray = recipe.cooking_method[0].replace(/[\[\]']+/g, '').split(','); %>
+            <% for (let i = 0; i < cookingMethodArray.length; i++) { %>
+                <div class="method">
+                    <%= cookingMethodArray[i] %>
+                </div>
+            <% } %>
+            </div>
             <h2>Serves: <%= recipe.serves %></h2>
         </div>
     </div>
