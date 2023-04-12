@@ -2,5 +2,6 @@
 require('../config/connection');
 
 module.exports = {
-    Recipe: require('./recipe')
+    Recipe: require('./recipe'),
+    User: require('./user')
 };
