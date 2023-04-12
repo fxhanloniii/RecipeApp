@@ -6,18 +6,18 @@
         <input type="text" name="name" id="name" value="<%=recipe.recipe_name%>" />
         <br>
         <label for="ingredients">Ingredients:</label>
-        <input type="text" name="ingredients" id="ingredients"  value=<%= recipe.ingredients %>>
+        <textarea type="text" name="ingredients" id="ingredients"  value=<%= recipe.ingredients %>></textarea>
         <br>
         <label for="prep-time">Prep-time: </label>
         <input type="text" name="prep-time" id="prep_time"  value=<%= recipe.prep_time %>>
         <br>
         <label for="cooking-method">Cooking-method: </label>
-        <input type="text" name="cooking-method" id="cooking_method"  value=<%= recipe.cooking_method %>>
+        <textarea type="text" name="cooking-method" id="cooking_method"  value=<%= recipe.cooking_method %>></textarea>
         <br>
         <label for="serves">Serves: </label>
         <input type="text" name="serves" id="serves"  value=<%= recipe.serves %>>
         <br>
-        <input type="submit" value="Edit <%= recipe.name %>">
+        <input type="submit" value="Edit <%= recipe.recipe_name %>">
     </form>
 </main> 
 </body>

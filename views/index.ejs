@@ -1,19 +1,17 @@
-<%- include('../partials/header.ejs', {pageTitle: "All recipes"}) %>
-    <h1>Here are all of my recipes</h1>
-    <input type="text" id="searchText">
-    <a href="/recipes" id="link">
-        <button id="searchSubmit">Search by name</button>
-    </a>
-    <% for(let i = 0; i < recipes.length; i++) { %>
+<%- include('./partials/header.ejs', {pageTitle: "All recipes"}) %>
+    <main>
+        <h1>Here are all of my recipes</h1>
+    <div class="recipes">
+    <% for(let i=0; i < 100 ? i < recipes.length : i < 20; i++) { %>
+        <div class="recipeDiv" >
         <a href='recipes/<%= recipes[i]._id %>'>
-            <h2>Name: <%= recipes[i].recipes_name %></h2>
+            <h3><%= recipes[i].recipe_name %></h3>
+            <img src="<%= recipes[i].image %>" >
         </a>
-            <h3>Ingredients: <%= recipes[i].ingredients %></h3>
-            <h3>Prep-time: $<%= recipes[i].prep_time %></h3>
-            <h2>Cooking-method: <%= recipe.cooking_method %></h2>
-            <h3>Serves: $<%= recipes[i].serves %></h3>
-        <hr>
+    </div>
     <% } %>
-<%- include('../partials/footer.ejs') %>
+</div>
+</main>
+<%- include('./partials/footer.ejs') %>
 
 //this is the page for ALL Recipes!!
