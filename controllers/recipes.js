@@ -5,12 +5,19 @@ const { Recipe } = require('../models')
 // router.get('/recipe', (req, res) => {
 //     res.render('/index.ejs', { Recipe })
 //   })
-
+//http://localhost:4000/recipes
+router.get('', async (req, res, next) => {
+  try {
+    const recipes = await Recipe.find({})
+    res.render('index.ejs', { recipes })
+  } catch (err) {
+    next()
+  }
+})
 
 // router.get('/recipe/new', (req, res) => {
 //     res.render('/new.ejs')
 // })
-
 
 router.get('/cuisine/:cuisine', async (req, res, next) => {
   try {

@@ -3,6 +3,7 @@ const router = express.Router()
 const { Recipe } = require('../models')
 
 //new route (added by SA)
+// http://localhost:4000/myRecipes/new
 router.get('/new', (req, res) => {
   res.render('myRecipes/new.ejs')
 })
@@ -20,6 +21,7 @@ router.post('', async (req, res, next) => {
 })
 
 //edit id route (added by SA) //have editing recipes on a separate page from originals?? using a user route
+//http://localhost:4000/myRecipes/642f38c85744207ab83dda7a/edit
 router.get('/:id/edit', async (req, res, next) => {
   try {
     const recipeToBeEdited = await Recipe.findById(req.params.id)
@@ -30,20 +32,20 @@ router.get('/:id/edit', async (req, res, next) => {
   }
 })
 
-// //(added by SA) // will need to create user route
-// router.put('/:id', async (req, res, next) => {
-//   try {
-//     const updatedRecipe = await Recipe.findByIdAndUpdate(
-//       req.params.id,
-//       req.body
-//     )
-//     // console.log(updatedRecipe);
-//     res.redirect(`/recipes/${req.params.id}`)
-//   } catch (err) {
-//     console.log(err)
-//     next()
-//   }
-// })
+//(added by SA) // will need to create user route // this route will update when we edit the selected recipe
+router.put('/recipes/:id', async (req, res, next) => {
+  try {
+    const updatedRecipe = await Recipe.findByIdAndUpdate(
+      req.params.id,
+      req.body
+    )
+    // console.log(updatedRecipe);
+    res.redirect(`/recipes/${req.params.id}`)
+  } catch (err) {
+    console.log(err)
+    next()
+  }
+})
 
 // // get route (added by SA) // will need to create user route
 // router.get('/:id/delete', async (req, res, next) => {
