@@ -33,13 +33,13 @@ router.get('/:id/edit', async (req, res, next) => {
 })
 
 //(added by SA) // will need to create user route // this route will update when we edit the selected recipe
-router.put('/recipes/:id', async (req, res, next) => {
+router.put('/:id', async (req, res, next) => {
   try {
     const updatedRecipe = await Recipe.findByIdAndUpdate(
       req.params.id,
       req.body
     )
-    // console.log(updatedRecipe);
+    console.log(updatedRecipe);
     res.redirect(`/recipes/${req.params.id}`)
   } catch (err) {
     console.log(err)

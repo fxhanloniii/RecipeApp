@@ -2,7 +2,7 @@
 const express = require('express')
 const app = express()
 const PORT = 4000
-// const methodOverride = require('method-override');
+const methodOverride = require('method-override');
 const recipesController = require('./controllers/recipes')
 //added by SA for CRUD routes
 const myRecipesController = require('./controllers/myRecipes')
@@ -34,7 +34,7 @@ app.use(
 
 app.use(express.urlencoded({ extended: false }))
 
-// app.use(methodOverride('_method'));
+app.use(methodOverride('_method'));
 
 app.get('/', (req, res) => {
   res.render('home.ejs')

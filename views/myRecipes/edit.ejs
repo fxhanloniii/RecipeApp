@@ -1,7 +1,7 @@
 <%- include('../partials/header.ejs', {pageTitle: "Edit " + recipe.recipe_name}) %>
 <main> 
     <h1>Edit the recipe <%= recipe.name %> by <%= recipe.ingredients %></h1>
-    <form method="POST" action="/recipes/<%= recipe._id %>?_method=PUT">
+    <form method="POST" action="/myRecipes/<%= recipe._id %>?_method=PUT">
         <label for="name">Name:</label>
         <input type="text" name="name" id="name" value="<%=recipe.recipe_name%>" />
         <br>
