@@ -36,6 +36,7 @@ router.post('/login', async(req, res, next) => {
     };
 })
 
+// Add Sign Up Link/Button
 router.post('/signup', async(req,res,next) => {
     try {
         const newUser = req.body;
@@ -51,6 +52,7 @@ router.post('/signup', async(req,res,next) => {
     };
 });
 
+// Add Logout Link 
 router.get('/logout', (req,res) => {
     req.session.destroy();
     res.redirect('/login');

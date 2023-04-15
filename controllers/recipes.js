@@ -40,6 +40,9 @@ router.get('', async (req, res, next) => {
 // router.get('/recipe/new', (req, res) => {
 //     res.render('/new.ejs')
 // })
+router.get('/cuisines', (req, res) => {
+  res.render('cuisine.ejs');
+});
 
 router.get('/cuisine/:cuisine', async (req, res, next) => {
   try {
@@ -52,10 +55,70 @@ router.get('/cuisine/:cuisine', async (req, res, next) => {
     const recipes = await Recipe.find({ cuisine: `['${cuisine}']` })
     //const recipes = await Recipe.find
     // console.log(recipes);
-    res.render('cuisine.ejs', { recipes: recipes })
+    res.render('cuisineIndex.ejs', { recipes: recipes })
   } catch (err) {
     console.log(err)
     next()
+  }
+})
+
+router.get('/holidays', async (req, res, next) => {
+  try {
+    const recipes = await Recipe.find({
+      $or: [
+        {recipe_name: {$regex: "holiday", $options: 'i' }},
+        {recipe_name: {$regex: "holiday", $options: 'i' }}
+      ]
+    });
+    res.render('tags.ejs', {recipes: recipes});
+  } catch(err) {
+    console.log(err);
+    next();
+  }
+})
+
+router.get('/dessert', async (req, res, next) => {
+  try {
+    const recipes = await Recipe.find({
+      $or: [
+        {recipe_name: {$regex: "dessert", $options: 'i' }},
+        {recipe_name: {$regex: "dessert", $options: 'i' }}
+      ]
+    });
+    res.render('tags.ejs', {recipes: recipes});
+  } catch(err) {
+    console.log(err);
+    next();
+  }
+})
+
+router.get('/smoothies', async (req, res, next) => {
+  try {
+    const recipes = await Recipe.find({
+      $or: [
+        {recipe_name: {$regex: "smoothie", $options: 'i' }},
+        {recipe_name: {$regex: "smoothie", $options: 'i' }}
+      ]
+    });
+    res.render('tags.ejs', {recipes: recipes});
+  } catch(err) {
+    console.log(err);
+    next();
+  }
+})
+
+router.get('/snacks', async (req, res, next) => {
+  try {
+    const recipes = await Recipe.find({
+      $or: [
+        {recipe_name: {$regex: "snack", $options: 'i' }},
+        {recipe_name: {$regex: "snack", $options: 'i' }}
+      ]
+    });
+    res.render('tags.ejs', {recipes: recipes});
+  } catch(err) {
+    console.log(err);
+    next();
   }
 })
 
