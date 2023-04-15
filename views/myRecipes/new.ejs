@@ -1,21 +1,33 @@
 <%- include('../partials/header.ejs', {pageTitle: "Create a new recipe"}) %>
 <main>   
 <h1>Add a new recipe to RSF Recipes!</h1>
-    <form action="/recipes" method="POST">
-        <label for="name">Name:</label>
-        <input type="text" name="name" id="name">
+    <form action="/myRecipes" method="POST">
+        <label for="category">Category:</label>
+        <input type="text" name="category" id="category">
+        <br>
+        <label for="cooking-method">Cooking-method:</label>
+        <input type="text" name="cooking-method" id="cooking_method">
+        <br>
+        <label for="cuisine">Cuisine:</label>
+        <input type="text" name="cuisine" id="cuisine">
+        <br>
+        <label for="image">Image:</label>
+        <input type="text" name="image" id="image">
         <br>
         <label for="ingredients">Ingredients:</label>
         <input type="text" name="ingredients" id="ingredients">
         <br>
         <label for="prep-time">Prep-time:</label>
-        <input type="text" name="prep-time" id="prep_time">
+        <input type="text" name="prep_time" id="prep_time">
         <br>
-        <label for="cooking-method">Cooking-method:</label>
-        <input type="text" name="cooking-method" id="cooking_method">
+        <label for="recipe_name">Name:</label>
+        <input type="text" name="recipe_name" id="recipe_name">
         <br>
         <label for="serves">Serves:</label>
         <input type="text" name="serves" id="serves">
+        <br>
+        <label for="tags">Tags:</label>
+        <input type="text" name="tags" id="tags">
         <br>
         <input type="submit" value="Add this recipe">
     </form>

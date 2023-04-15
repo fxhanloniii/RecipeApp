@@ -1,7 +1,7 @@
 const express = require('express')
 const router = express.Router()
 const { Recipe } = require('../models')
-const practiceSeed = require('../config/practiceSeedData')
+
 //new route (added by SA)
 // http://localhost:4000/myRecipes/new
 router.get('/new', (req, res) => {
@@ -11,9 +11,10 @@ router.get('/new', (req, res) => {
 //post route to post through mongo (added by SA)
 router.post('', async (req, res, next) => {
   try {
-    const newRecipe = await Recipe.create(req.body)
+    const newRecipe = req.body
+    await Recipe.create(req.body)
     console.log(newRecipe)
-    res.redirect('/recipe')
+    res.redirect('/recipes')
   } catch (err) {
     console.log(err)
     next()
@@ -47,28 +48,28 @@ router.put('/:id', async (req, res, next) => {
   }
 })
 
-// // get route (added by SA) // will need to create user route
-// router.get('/:id/delete', async (req, res, next) => {
-//   try {
-//     const recipeToBeDeleted = await Recipe.findById(req.params.id)
-//     // console.log(recipeToBeDeleted);
-//     res.render('recipe/delete.ejs', { recipe: recipeToBeDeleted })
-//   } catch (err) {
-//     console.log(err)
-//     next()
-//   }
-// })
+// get route (added by SA) // DELETE ROUTE //http://localhost:4000/recipes/642f38c85744207ab83dda82  //WE WANTED TO DELETE ONLY THIS RECIPE FOR TESTTING PURPOSES
+router.get('/:id/delete', async (req, res, next) => {
+  try {
+    const recipeToBeDeleted = await Recipe.findById(req.params.id)
+    // console.log(recipeToBeDeleted);
+    res.render('myRecipes/delete.ejs', { recipe: recipeToBeDeleted })
+  } catch (err) {
+    console.log(err)
+    next()
+  }
+})
 
 // //delete route (added by SA) // will need to create user route
-// router.delete('/:id', async (req, res) => {
-//   try {
-//     const deletedItem = await Recipe.findByIdAndDelete(req.params.id)
-//     // console.log(deletedItem);
-//     res.redirect('/recipe')
-//   } catch (err) {
-//     console.log(err)
-//     next()
-//   }
-// })
+router.delete('/:id', async (req, res) => {
+  try {
+    const deletedItem = await Recipe.findByIdAndDelete(req.params.id)
+    // console.log(deletedItem);
+    res.redirect('/recipes')
+  } catch (err) {
+    console.log(err)
+    next()
+  }
+})
 
 module.exports = router
