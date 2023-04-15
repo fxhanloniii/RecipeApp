@@ -1,0 +1,25 @@
+<%- include('./partials/header.ejs', {pageTitle: "Edit " + recipe.recipe_name}) %>
+<main> 
+    <div class="divForm">
+    <h1>Edit: <%= recipe.recipe_name %> </h1>
+    <form method="POST" action="/recipes/<%= recipe._id %>?_method=PUT">
+        <label for="recipe_name">Name:</label>
+        <input type="text" name="recipe_name" id="recipe_name" value="<%=recipe.recipe_name%>" />
+        <br>
+        <label for="ingredients">Ingredients:</label>
+        <input type="text" name="ingredients" id="ingredients"  value= "<%= recipe.ingredients %>">
+        <br>
+        <label for="prep_time">Prep-time: </label>
+        <input type="text" name="prep_time" id="prep_time"  value=<%= recipe.prep_time %>>
+        <br>
+        <label for="cooking_method">Cooking-method: </label>
+        <input type="text" name="cooking_method" id="cooking_method"  value="<%= recipe.cooking_method %>">
+        <br>
+        <label for="serves">Serves: </label>
+        <input type="text" name="serves" id="serves"  value=<%= recipe.serves %>>
+        <br>
+        <input type="submit" value="Edit <%= recipe.recipe_name %>">
+    </form>
+</div>
+</main> 
+<%- include("./partials/footer.ejs") %>

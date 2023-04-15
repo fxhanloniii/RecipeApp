@@ -23,7 +23,7 @@ router.post('', async (req, res, next) => {
 
 //edit id route (added by SA) //have editing recipes on a separate page from originals?? using a user route
 //http://localhost:4000/myRecipes/642f38c85744207ab83dda7a/edit
-router.get('/:id/edit', async (req, res, next) => {
+router.get('recipes/:id/edit', async (req, res, next) => {
   try {
     const recipeToBeEdited = await Recipe.findById(req.params.id)
     res.render('myRecipes/edit.ejs', { recipe: recipeToBeEdited })
