@@ -1,7 +1,7 @@
 const express = require('express')
 const router = express.Router()
 const { Recipe } = require('../models')
-
+const practiceSeed = require('../config/practiceSeedData')
 //new route (added by SA)
 // http://localhost:4000/myRecipes/new
 router.get('/new', (req, res) => {
