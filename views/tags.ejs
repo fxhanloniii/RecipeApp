@@ -1,0 +1,14 @@
+<%- include('./partials/header.ejs', {pageTitle: "Holidays"}) %>
+<main> 
+    <div class="recipes">
+        <% for(let i=0; i < 100 ? i < recipes.length : i < 20; i++) { %>
+            <div class="recipeDiv" >
+            <a href='/recipes/<%= recipes[i]._id %>'>
+                <h3><%= recipes[i].recipe_name %></h3>
+                <img src="<%= recipes[i].image %>" >
+            </a>
+        </div>
+        <% } %>
+    </div>
+</main>
+<%- include("./partials/footer.ejs") %>
