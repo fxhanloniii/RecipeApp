@@ -6,6 +6,8 @@ html, body {
     
 }
 
+/* Header */
+
 header {
     display: flex;
     flex-direction: column;
@@ -114,10 +116,14 @@ nav a {
     background-color: #ffa31a;
 }
 
+/* Main */
+
 main {
     padding-top: 250px;
     margin: 0px;
 }
+
+/* Home Page */
 
 .div1 {
     height: 350px;
