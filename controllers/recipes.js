@@ -60,15 +60,11 @@ router.get('/cuisines', (req, res) => {
 
 router.get('/cuisine/:cuisine', async (req, res, next) => {
   try {
-    // console.log(req.params);
     let { cuisine } = req.params
     cuisine = cuisine[0].toUpperCase() + cuisine.substring(1, cuisine.length)
-    // cuisine = cuisine.replaceAll
-    // console.log(cuisine);
+    // Help from Julio
     // const recipes = await Recipe.find({ 'cuisine': {$regex:/cuisine/i} });
     const recipes = await Recipe.find({ cuisine: `['${cuisine}']` })
-    //const recipes = await Recipe.find
-    // console.log(recipes);
     res.render('cuisineIndex.ejs', { recipes: recipes })
   } catch (err) {
     console.log(err)
