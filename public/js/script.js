@@ -7,3 +7,4 @@ searchForm.addEventListener('submit', (event) => {
 
 // https://www.w3schools.com/jsref/event_preventdefault.asp
 // https://developer.mozilla.org/en-US/docs/Web/API/Event/preventDefault 
+// https://www.freecodecamp.org/news/manage-default-behavior-in-browser/

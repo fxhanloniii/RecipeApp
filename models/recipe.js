@@ -47,3 +47,13 @@ const recipeSchema = new mongoose.Schema(
 const Recipe = mongoose.model('Recipe', recipeSchema, 'RecipeDB');
 
 module.exports = Recipe;
+
+
+
+
+// https://www.mongodb.com/docs/database-tools/installation/installation-macos/
+// brew list | grep mongodb-database-tools
+// brew tap mongodb/brew
+// brew install mongodb-database-tools
+// https://www.mongodb.com/docs/database-tools/mongoimport/#std-label-import-csv
+// mongoimport --uri mongodb+srv://fxhanloniii:<password>@sei.jry4bns.mongodb.net/RecipeApp --collection RecipeDB --type csv --file recipes.csv --head
