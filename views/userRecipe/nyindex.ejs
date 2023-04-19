@@ -1,13 +1,15 @@
 <%- include('../partials/header.ejs', {pageTitle: "All Fan Favorites"}) %>
+<main>
     <h1>Here are all of Fan Favorites</h1>
     <% for(let i = 0; i < recipes.length; i++) { %>
-        <a href='recipes/<%= recipes[i]._id %>'>
-            <h2>Name: <%= recipes[i].recipes_name %></h2>
+        <a href='userRecipe/<%= recipes[i]._id %>'>
+            <h2><%= recipes[i].recipe_name %></h2>
         </a>
             <h3>Ingredients: <%= recipes[i].ingredients %></h3>
             <h3>Prep-time: <%= recipes[i].prep_time %></h3>
-            <h2>Cooking-method: <%= recipe.cooking_method %></h2>
+            <h2>Cooking-method: <%= recipes[i].cooking_method %></h2>
             <h3>Serves: <%= recipes[i].serves %></h3>
         <hr>
-    <% } %>
+        <% } %>
+    </main>
 <%- include('../partials/footer.ejs') %>
