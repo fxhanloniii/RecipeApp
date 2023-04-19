@@ -1,6 +1,6 @@
-<%- include('../partials/header.ejs', {pageTitle: "All of our Fan Favorites"}) %>
+<%- include('../partials/header.ejs', {pageTitle: "Fan Favorites Recipes"}) %>
 <main>
-    <h1>Here are all of Fan Favorites</h1>
+    <h1>Here are all of our Fan Favorite recipes!</h1>
     <% for(let i = 0; i < recipes.length; i++) { %>
         <a href='userRecipe/<%= recipes[i]._id %>'>
             <h2><%= recipes[i].recipe_name %></h2>
