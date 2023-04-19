@@ -2,14 +2,14 @@
 const express = require('express')
 const app = express()
 const PORT = 4000
-const methodOverride = require('method-override');
+const methodOverride = require('method-override')
 const recipesController = require('./controllers/recipes')
 //added by SA for CRUD routes
 const userRecipeController = require('./controllers/userRecipe')
 const userController = require('./controllers/users')
 
-const session = require('express-session');
-const MongoStore = require('connect-mongo');
+const session = require('express-session')
+const MongoStore = require('connect-mongo')
 
 // Middleware
 app.set('view engine', 'ejs')
@@ -30,20 +30,19 @@ app.use(
   })
 )
 
-
-
 app.use(express.urlencoded({ extended: false }))
 
-app.use(methodOverride('_method'));
+app.use(methodOverride('_method'))
 
 app.get('/', (req, res) => {
   res.render('home.ejs')
 })
 
-app.use('', userController);
+app.use('', userController)
 
 app.use('/recipes', recipesController)
-//added by SA for CRUD routes
+
+//CRUD routes
 app.use('/userRecipe', userRecipeController)
 
 // Server
