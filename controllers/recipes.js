@@ -76,8 +76,8 @@ router.get('/holidays', async (req, res, next) => {
   try {
     const recipes = await Recipe.find({
       $or: [
-        {recipe_name: {$regex: "holiday", $options: 'i' }},
-        {tags: {$regex: "holiday", $options: 'i' }}
+         {recipe_name: {$regex: "holiday", $options: 'i' }},
+         {tags: {$regex: "holiday", $options: 'i' }}
       ]
     });
     res.render('tags.ejs', {recipes: recipes});
