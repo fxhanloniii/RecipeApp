@@ -70,19 +70,19 @@ router.put('/:id', async (req, res, next) => {
   }
 })
 
-// get route  // DELETE ROUTE //http://localhost:4000/recipes/642f38c85744207ab83dda82  //WE WANTED TO DELETE ONLY THIS RECIPE FOR TESTTING PURPOSES
+// delete
 router.get('/:id/delete', async (req, res, next) => {
   try {
     const recipeToBeDeleted = await UserRecipe.findById(req.params.id)
     // console.log(recipeToBeDeleted);
-    res.render('userRecipe/delete.ejs', { recipe: recipeToBeDeleted })
+    res.render('userRecipe/nydelete.ejs', { recipe: recipeToBeDeleted })
   } catch (err) {
     console.log(err)
     next()
   }
 })
 
-// //delete route// will need to create user route
+// delete update page
 router.delete('/:id', async (req, res) => {
   try {
     const deletedItem = await UserRecipe.findByIdAndDelete(req.params.id)
