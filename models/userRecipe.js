@@ -18,6 +18,10 @@ const userRecipeSchema = new mongoose.Schema(
         type: [String],
         required: [true, "Please provide a cooking method"],
     },
+    serves: {
+        type: String,
+        required: [true, "Please provide a number of servings"],
+      },
     image: {
         type: String,
         required: [true, "Please provide a URL for an image"],
