@@ -156,7 +156,7 @@ router.get('/:id/delete', async (req, res, next) => {
 router.delete('/:id', async (req, res) => {
   try {
     const deletedItem = await Recipe.findByIdAndDelete(req.params.id)
-    res.redirect('/recipes')
+    res.redirect('/')
   } catch (err) {
     next()
   }
