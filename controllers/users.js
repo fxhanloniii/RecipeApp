@@ -11,6 +11,7 @@ router.get('/signup', (req, res) => {
     res.render('users/signup');
 });
 
+//authentication
 router.post('/login', async(req, res, next) => {
     try {
         let user;
@@ -31,7 +32,6 @@ router.post('/login', async(req, res, next) => {
             res.redirect('/login')
         }
     } catch(err) {
-        console.log(err);
         next();
     };
 })
@@ -47,7 +47,6 @@ router.post('/signup', async(req,res,next) => {
         await User.create(newUser);
         res.redirect('/login');
     } catch(err) {
-        console.log(err);
         next();
     };
 });

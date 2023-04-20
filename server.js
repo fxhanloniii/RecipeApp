@@ -4,7 +4,7 @@ const app = express()
 const PORT = 4000
 const methodOverride = require('method-override')
 const recipesController = require('./controllers/recipes')
-//added by SA for CRUD routes
+
 const userRecipeController = require('./controllers/userRecipe')
 const userController = require('./controllers/users')
 
@@ -42,10 +42,8 @@ app.use('', userController)
 
 app.use('/recipes', recipesController)
 
-//CRUD routes
 app.use('/userRecipe', userRecipeController)
 
 // Server
 app.listen(PORT, () => {
-  console.log(`Cooking up recipes on ${PORT}`)
 })
