@@ -17,13 +17,21 @@
 * MongoDB & Mongoose, and sources from Kaggle API recipes_82k.csv imported into MongoDB
 
 ## Sceenshot(s) of the app
-![Screenshot](/public/assets/Screenshot1.png)
+![Screenshot](/assets/Screenshot1.png)
+![Screenshot](/assets/Screenshot2.png)
+![Screenshot](/assets/Screenshot3.png)
+![Screenshot](/assets/Screenshot4.png)
+![Screenshot](/assets/Screenshot5.png)
+![Screenshot](/assets/Screenshot6.png)
+![Screenshot](/assets/Screenshot7.png)
+![Screenshot](/assets/Screenshot8.png)
+![Screenshot](/assets/Screenshot9.png)
+![Screenshot](/assets/Screenshot10.png)
 
 ## Getting Started:
 (link to deployed app when finished and any instructions deemed important)
 
 ## Next Steps: Planned future enchancements (icebox items)
-* Favorites Tab working
 * User profile
 * Newsletter mailing list functioning
 * Meal Planning
