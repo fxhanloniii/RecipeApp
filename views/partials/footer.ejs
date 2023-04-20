@@ -2,14 +2,47 @@
 <div class="newsletter">
     <h4>NEWSLETTER</h4>
     <p>JOIN OUR MAILING LIST TODAY. STAY UP TO DATE!</p>
-    <form>
+    <form method="POST" action="/recipes/newsletter">
         <input type="email" name="email" placeholder="Enter your email address" required>
-        <button type="submit">Subscribe</button>
+        <input type="submit" value="Subscribe">
     </form>
 </div>
 <div class="newRecipe">
     <h3 class="sabrinasLine">🏆👩‍🍳🥇WANT TO BE FEATURED ON RSF RECIPES?! ADD YOUR OWN RECIPE TODAY!👨‍🍳🥞🍕</h3>
     <a href="/userRecipe/new"><button>Add A Recipe</button></a>
 </div>
+<div class="bottom">
+    <div class="left">
+        <p>Company</p>
+        <p>About</p>
+        <p>Contact Us</p>
+        <p>Our Licence</p>
+        <p>Blog</p>
+        <p>What's New</p>
+    </div>
+    <div class="middle">
+        <div class="social">
+            <p>Follow Us!</p>
+            <img src="/assets/instagram.png">
+            <img src="/assets/facebook.png">
+            <img src="/assets/twitter.png">
+            <img src="/assets/pinterest.png">
+            <img src="/assets/linkedin.png">
+            <img src="/assets/youtube.png">
+        </div>
+    </div>
+    <div class="right">
+        <a href="/recipes"><p>Recipes</p></a>
+        <a href="/recipes?search=kid%20friendly"><p>Kid Friendly</p></a>
+        <a href="/recipes?search=dairy%20free"><p>Dairy Free</p></a>
+        <a href="/recipes?search=keto"><p>Keto</p></a>
+        <a href="/recipes?search=paleo"><p>Paleo</p></a>
+        <a href="/recipes?search=low%20carb"><p>Low Carb</p></a>
+    </div>
+</div>
+    <p class="copyright">
+        ©2023 RSF Recipes. All rights reserved...except for the rights to the last slice of pizza, that's fair game.
+    </p>
+
 </body>
 </html>

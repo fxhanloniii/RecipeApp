@@ -11,10 +11,17 @@
 <body>
     <header>
         <div class="topHeader">
-            <img src="/assets/logo.png">
-            <div class="login">
-                <a href="/login">Log In</a>
-            </div>
+            <a href="/"><img src="/assets/logo.png"></a>                  
+                <div class="login">
+                    <% if (typeof username !== 'undefined') { %>
+                        <div class="user">
+                            <p>Welcome, <%= username %>!</p>
+                            <a href="/logout"><button>Log Out</button></a>
+                        </div>
+                        <% } else { %>
+                            <a href="/login"><button>Log In</button></a>
+                            <% } %>
+                </div>
         </div>
         <div class="navbar">
             <nav>
@@ -32,7 +39,7 @@
         </div>
         <div class="searchDiv">
         <form class="search">
-            <input type="text" name="search" placeholder="Search Recipes...">
+            <input type="text" name="search" placeholder="Search Over 80,000 Recipes...">
             <button type="submit">Search</button>
         </form>
         </div>
