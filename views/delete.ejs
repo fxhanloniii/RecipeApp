@@ -2,7 +2,7 @@
 <main>
     <div class="divForm">
 <h1>Are you sure you really want to delete <%= recipe.recipe_name %>?</h1>
-<form method="POST" action="/myRecipes/<%= recipe._id %>?_method=DELETE">
+<form method="POST" action="/recipes/<%= recipe._id %>?_method=DELETE">
     <input type="submit" value="Yes, please delete it">
 </form>
 <a href="/recipes/<%= recipe._id %>">
