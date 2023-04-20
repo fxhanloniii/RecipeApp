@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
 
 html, body {
     font-family: 'Roboto Mono', monospace;
@@ -176,6 +177,15 @@ main {
     font-size: 20px;
 }
 
+.div2Title h4 {
+    font-family: 'Permanent Marker', cursive;
+    font-size: 40px;
+    color: #EF6351;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+    margin: 20px 0;
+    padding: 0;
+}
+
 .div2 {
     height: 600px;
     width: 100%;
@@ -192,6 +202,8 @@ main {
     display: flex;
     flex-direction: column;
     box-shadow: 0px 5px 10px rgba(0,0,0,0.3);
+    border-radius: 5px;
+    overflow: hidden;
 }
 
 .names {
@@ -239,7 +251,7 @@ main {
 
 
 
-/* Newsletter */
+/* Footer */
 
 .newsletter {
     height: 200px;
@@ -270,11 +282,20 @@ main {
 }
 
 .newsletter button[type="submit"] {
-    background-color: black;
-    color: white;
-    border: none;
     padding: 10px 20px;
+    width: 125px;
+    font-family: 'Roboto Mono', monospace;
+    border: none;
+    color: white;
+    background-color: #F38375;
     font-size: 16px;
+    border-radius: 5px;
+    box-shadow: 0px 5px 10px rgba(0,0,0,0.3);
+}
+
+.newsletter button[type="submit"]:hover {
+    background-color: #EF6351;
+    box-shadow: 0px 8px 16px rgba(0,0,0,0.5);
 }
 
 .newRecipe {
@@ -283,21 +304,73 @@ main {
     align-items: center;
     height: 125px;
     width: 100%;
-    background-color: #EF6351;
+    background-color: #F38375;
     color: white;  
 }
 .newRecipe button {
-    background-color: black;
-    color: white;
-    border: none;
     padding: 10px 20px;
+    width: 175px;
+    font-family: 'Roboto Mono', monospace;
+    border: none;
+    color: white;
+    background-color: #fdcc43;
     font-size: 16px;
+    border-radius: 5px;
+    box-shadow: 0px 5px 10px rgba(0,0,0,0.3);
+}
+
+.newRecipe button:hover {
+    background-color: #ffd666;
+    box-shadow: 0px 8px 16px rgba(0,0,0,0.5);
 }
 
 .newRecipe h3 {
     padding: 0;
 }
 
+.bottom {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 300px;
+    width: 100%;
+    background-color: #EF6351;
+    color: white;
+}
+
+.middle {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 5px solid white;
+    padding: 30px;
+}
+.social {
+    text-align: center;
+}
+.social img {
+    height: 30px;
+    width: 30px;
+}
+
+
+.right a {
+    text-decoration: none;
+    color: white;
+}
+
+.copyDiv {
+    background-color: #EF6351;
+    width: 100%;
+    height: 40px;
+}
+
+.copyright {
+    font-size: 10px;
+    text-align: center;
+}
 
 /* Recipes */
 
@@ -405,10 +478,19 @@ main {
 
 .divForm input[type="submit"] {
     padding: 10px 20px;
+    width: 225px;
     font-family: 'Roboto Mono', monospace;
-    border: 2px solid black;
-    color: black;
+    border: none;
+    color: white;
+    background-color: #F38375;
     font-size: 16px;
+    border-radius: 5px;
+    box-shadow: 0px 5px 10px rgba(0,0,0,0.3);
+}
+
+.divForm input[type="submit"]:hover {
+    background-color: #EF6351;
+    box-shadow: 0px 8px 16px rgba(0,0,0,0.5);
 }
 
 .divForm input[id="cooking_method"] {
@@ -445,14 +527,33 @@ main {
     object-fit: cover;
 }
 
+.cuisineDiv img:hover {
+    filter: brightness(70%);
+}
+
 /* Buttons */
+
+.editDelete {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 20px auto;
+}
 
 main button {
     padding: 10px 20px;
-    width: 300px;
+    width: 225px;
     font-family: 'Roboto Mono', monospace;
-    border: 2px solid black;
-    color: black;
+    border: none;
+    color: white;
+    background-color: #F38375;
     font-size: 16px;
+    border-radius: 5px;
+    box-shadow: 0px 5px 10px rgba(0,0,0,0.3);
+}
+
+main button:hover {
+    background-color: #EF6351;
+    box-shadow: 0px 8px 16px rgba(0,0,0,0.5);
 }
 

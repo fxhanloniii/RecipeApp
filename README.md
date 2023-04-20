@@ -29,7 +29,7 @@
 ![Screenshot](/public/assets/Screenshot10.png)
 
 ## Getting Started:
-(link to deployed app when finished and any instructions deemed important)
+[RSF Recipes](https://rsfrecipes.onrender.com/)
 
 ## Next Steps: Planned future enchancements (icebox items)
 * User profile

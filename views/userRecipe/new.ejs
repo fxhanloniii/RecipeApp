@@ -1,6 +1,7 @@
 <%- include('../partials/header.ejs', {pageTitle: "Create a new recipe"}) %>
 <main>   
-<h1>Add a new recipe to RSF Recipes!</h1>
+<div class="divForm">
+    <h1>Add a new recipe to RSF Recipes!</h1>
     <form action="/userRecipe" method="POST">
         <label for="recipe_name">Name:</label>
         <input type="text" name="recipe_name" id="recipe_name">
@@ -22,5 +23,6 @@
         <br>
         <input type="submit" value="Add this recipe">
     </form>
+</div>
 </main> 
 <%- include('../partials/footer.ejs') %>
