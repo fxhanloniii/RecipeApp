@@ -303,9 +303,10 @@ main {
     flex-direction: column;
     align-items: center;
     height: 125px;
-    width: 100%;
+    width: auto;
     background-color: #F38375;
-    color: white;  
+    color: white; 
+    margin: 10px;
 }
 .newRecipe button {
     padding: 10px 20px;
@@ -442,6 +443,7 @@ main {
     height: 600px;
     box-shadow: 0px 5px 10px rgba(0,0,0,0.3);
     object-fit: cover;
+    border: 4px solid black;
 
 }
 
@@ -465,20 +467,36 @@ main {
     padding-bottom: 40px;
 }
 
+.divForm h1 {
+    font-family: 'Permanent Marker', cursive;
+    font-size: 40px;
+    color: #EF6351;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+    margin: 20px 0;
+    padding: 0;
+    text-align: center;
+}
 .divForm form {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
     margin-top: 20px;
 }
 
+.divForm label {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+}
+
 .divForm input {
-    width: 300px
+    width: 100%;
 }
 
 .divForm input[type="submit"] {
     padding: 10px 20px;
-    width: 225px;
+    width: auto;
     font-family: 'Roboto Mono', monospace;
     border: none;
     color: white;
@@ -495,10 +513,13 @@ main {
 
 .divForm input[id="cooking_method"] {
     height: 100px;
-    inline-size: 300px;
+    width: 100%;
     word-wrap: break-word;
 }
 
+.deletePage {
+    margin: 20px;
+}
 /* Cuisine Div */
 
 .cuisines {
@@ -542,7 +563,7 @@ main {
 
 main button {
     padding: 10px 20px;
-    width: 225px;
+    width: auto;
     font-family: 'Roboto Mono', monospace;
     border: none;
     color: white;
@@ -557,3 +578,12 @@ main button:hover {
     box-shadow: 0px 8px 16px rgba(0,0,0,0.5);
 }
 
+.titleH1 {
+    font-family: 'Permanent Marker', cursive;
+    font-size: 40px;
+    color: #EF6351;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+    margin: 20px 0;
+    padding: 0;
+    text-align: center;
+}

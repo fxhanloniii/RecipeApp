@@ -1,12 +1,12 @@
 <%- include('../partials/header.ejs', {pageTitle: "Are you really going to delete " + recipe.recipe_name + "?????"}) %>
 <main>
     <div class="divForm">
-<h1>Are you sure you really want to delete <%= recipe.recipe_name %>?</h1>
+<h1 class="titleH1">Are you sure you really want to delete <%= recipe.recipe_name %>?</h1>
 <form method="POST" action="/userRecipe/<%= recipe._id %>?_method=DELETE">
-    <input type="submit" value="Yes, please delete it">
+    <input type="submit" class="deletePage" value="Yes, please delete it">
 </form>
 <a href="/userRecipe/<%= recipe._id %>">
-    <button>No, cancel! I want this</button>
+    <button class="deletePage">No, cancel! I want this</button>
 </a>
 </div>
 </main>
