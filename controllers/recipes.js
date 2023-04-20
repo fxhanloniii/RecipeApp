@@ -1,6 +1,7 @@
 const express = require('express')
 const router = express.Router()
 const { Recipe } = require('../models')
+const { User } = require('../models')
 
 // Index All Recipes & Search Query
 // https://www.mongodb.com/docs/manual/reference/operator/query/or/

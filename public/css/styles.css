@@ -30,13 +30,32 @@ header {
 
 .login {
     display: flex;
-    justify-content: flex-end;
+    align-items: center;
+    justify-content: center;
     position: absolute;
     right: 20px;
+    color: white;
 }
 
 .login a {
     color: white;
+}
+
+.login button {
+    padding: 10px 20px;
+    width: auto;
+    font-family: 'Roboto Mono', monospace;
+    border: none;
+    color: white;
+    background-color: #fdcc43;
+    font-size: 16px;
+    border-radius: 5px;
+    box-shadow: 0px 5px 10px rgba(0,0,0,0.3);
+}
+
+.login button:hover {
+    background-color: #ffd666;
+    box-shadow: 0px 8px 16px rgba(0,0,0,0.5);
 }
 
 .topHeader img {
