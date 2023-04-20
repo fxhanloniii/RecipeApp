@@ -3,5 +3,6 @@ require('../config/connection');
 
 module.exports = {
     Recipe: require('./recipe'),
-    User: require('./user')
+    User: require('./user'),
+    Subscriber: require('./subscriber')
 };

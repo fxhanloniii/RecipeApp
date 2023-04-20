@@ -1,7 +1,7 @@
 const express = require('express')
 const router = express.Router()
 const { Recipe } = require('../models')
-const { User } = require('../models')
+const { Subscriber } = require('../models')
 
 // Index All Recipes & Search Query
 // https://www.mongodb.com/docs/manual/reference/operator/query/or/
@@ -160,6 +160,16 @@ router.delete('/:id', async (req, res) => {
     res.redirect('/recipes')
   } catch (err) {
     next()
+  }
+})
+
+router.post('/newsletter', async (req, res, next) => {
+  try {
+    const email = req.body;
+    await Subscriber.create(email)
+    res.redirect('back')
+  } catch (err) {
+    next();
   }
 })
 
