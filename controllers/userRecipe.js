@@ -31,7 +31,6 @@ router.get('', async (req, res, next) => {
 //show route
 router.get('/:id', async (req, res, next) => {
   try {
-    console.log(req.params)
     const recipeSelected = await UserRecipe.findById(req.params.id)
     res.render('userRecipe/nyshow.ejs', { recipe: recipeSelected })
   } catch (err) {
