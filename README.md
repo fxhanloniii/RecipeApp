@@ -17,17 +17,7 @@
 * MongoDB & Mongoose, and sources from Kaggle API recipes_82k.csv imported into MongoDB
 
 ## Sceenshot(s) of the app
-!(public/assets/Screenshot1.png)
-!(public/assets/Screenshot2.png)
-!(public/assets/Screenshot3.png)
-!(public/assets/Screenshot4.png)
-!(public/assets/Screenshot5.png)
-!(public/assets/Screenshot6.png)
-!(public/assets/Screenshot7.png)
-!(public/assets/Screenshot8.png)
-!(public/assets/Screenshot9.png)
-!(public/assets/Screenshot10.png)
-
+![Screenshot](/public/assets/Screenshot1.png)
 
 ## Getting Started:
 (link to deployed app when finished and any instructions deemed important)
