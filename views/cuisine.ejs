@@ -1,16 +1,42 @@
-<%- include('./partials/header.ejs', {pageTitle: "Recipe.cuisine"}) %>
-
-<div class="recipes">
-    <% for(let i=0; i < 100 ? i < recipes.length : i < 20; i++) { %>
-    <div class="recipeDiv">
-        <a href='/recipes/<%= recipes[i]._id %>'><h3><%= recipes[i].recipe_name %></h3></a>
-        <a href='/recipes/<%= recipes[i]._id %>'><img src="<%= recipes[i].image %>"></a>
+<%- include('./partials/header.ejs', {pageTitle: "Holidays"}) %>
+<main>
+    <div class="cuisines">
+        <div class="cuisineDiv">
+            <a href="/recipes/cuisine/italian"><img src="/assets/italian1.png"></a>
+            <div class="text">
+                <p>Italian</p>
+            </div>
+        </div>
+        <div class="cuisineDiv">
+            <a href="/recipes/cuisine/american"><img src="/assets/american.png"></a>
+            <div class="text">
+                <p>American</p>
+            </div>
+        </div>
+        <div class="cuisineDiv">
+            <a href="/recipes/cuisine/mexican"><img src="/assets/mexican.png"></a>
+            <div class="text">
+                <p>Mexican</p>
+            </div>
+        </div>
+        <div class="cuisineDiv">
+            <a href="/recipes/cuisine/mediterranean"><img src="/assets/mediterranean.png"></a>
+            <div class="text">
+                <p>Mediterranean</p>
+            </div>
+        </div>
+        <div class="cuisineDiv">
+            <a href="/recipes/cuisine/indian"><img src="/assets/indian.png"></a>
+            <div class="text">
+                <p>Indian</p>
+            </div>
+        </div>
+        <div class="cuisineDiv">
+            <a href="/recipes/cuisine/chinese"><img src="/assets/chinese.png"></a>
+            <div class="text">
+                <p>Chinese</p>
+            </div>
+        </div>
     </div>
-    <% } %>
-</div>
-
-
-
-
-
-<%- include('./partials/footer.ejs') %>
+</main>
+<%- include("./partials/footer.ejs") %>

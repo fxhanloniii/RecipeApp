@@ -1,0 +1,15 @@
+<%- include('../partials/header.ejs', {pageTitle: "Fan Favorites Recipes"}) %>
+<main>
+    <h1>Here are all of our Community submitted shared recipes!</h1>
+    <div class="recipes">
+    <% for(let i = 0; i < recipes.length; i++) { %>
+        <div class="recipeDiv" >
+        <a href='userRecipe/<%= recipes[i]._id %>'>
+            <h3><%= recipes[i].recipe_name %></h3>
+            <img src="<%= recipes[i].image %>" >
+            </a>
+        </div>
+        <% } %>
+    </div>
+    </main>
+<%- include('../partials/footer.ejs') %>

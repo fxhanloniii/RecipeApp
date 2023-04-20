@@ -6,23 +6,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><%=pageTitle %> | RSF Recipes</title>
     <link rel="stylesheet" type="text/css" href="/css/styles.css">
+    <script src="/js/script.js" defer></script>
 </head>
 <body>
     <header>
         <div class="topHeader">
             <img src="/assets/logo.png">
             <div class="login">
-                <a href="/login">Log In / Profile</a>
+                <a href="/login">Log In</a>
             </div>
         </div>
         <div class="navbar">
             <nav>
                 <ul>
                     <li><a href="/">Home</a></li>
-                    <li><a href="/favorites">Favorites</a></li>
                     <li><a href="/recipes">Recipes</a></li>
-                    <li><a href="/cuisines">Cuisines</a></li>
+                    <li><a href="/recipes/cuisines">Cuisines</a></li>
+                    <li><a href="/recipes/holidays">Holidays</a></li>
+                    <li><a href="/recipes/smoothies">Smoothies</a></li>
+                    <li><a href="/recipes/dessert">Desserts</a></li>
+                    <li><a href="/recipes/snacks">Snacks</a></li>
+                    <li><a href="/userRecipe">Community</a></li>
                 </ul>
             </nav>
+        </div>
+        <div class="searchDiv">
+        <form class="search">
+            <input type="text" name="search" placeholder="Search Recipes...">
+            <button type="submit">Search</button>
+        </form>
         </div>
     </header> 

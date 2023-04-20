@@ -1,11 +1,10 @@
-<%- include('./partials/header.ejs', {pageTitle: "Recipe"}) %>
+<%- include('../partials/header.ejs', {pageTitle: "Fan Favorites Recipe"}) %>
 <main>
     <div class="recipeShow">
-        <!-- <h2>Cuisine: <%= recipe.cuisine %></h2> -->
         <div class="showImg">
             <img src="<%= recipe.image %>">
-            <a href="/recipes/<%=recipe._id%>/edit"><button>Edit</button></a>
-            <a href="/recipes/<%=recipe._id%>/delete"><button>Delete</button></a>
+            <a href="/userRecipe/<%=recipe._id%>/edit"><button>Edit</button></a>
+            <a href="/userRecipe/<%=recipe._id%>/delete"><button>Delete</button></a>
         </div>
         <div class="showInfo">
             <h1><%= recipe.recipe_name %></h1>
@@ -32,4 +31,4 @@
         </div>
     </div>
 </main>
-<%- include('./partials/footer.ejs') %>
+<%- include('../partials/footer.ejs') %>
